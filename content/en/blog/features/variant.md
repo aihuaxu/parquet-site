@@ -152,12 +152,12 @@ optional group EVENT_DATA (VARIANT(1)) = 1 {
 
 **The table below illustrates how the data is stored:**
 
-| Variant                             | `value`          | `typed_value.userId.value` | `typed_value.userId.typed_value` | `typed_value.eType.value` | `typed_value.eType.typed_value` |
-|-------------------------------------|------------------|----------------------------|----------------------------------|---------------------------|---------------------|
-| `{"userId": 100, "eType": "login"}` | `null`           | `null`                     | `100`                            | `null`                    | `"login"`           |
-| `100`                               | `100`            |                            |                                  |                           |         |           |
-| `{"userId": "Jim"}`                 | `null`           | `"Jim"`                    | `null`                           | `null`                    | `null`              |
-| `{"userId": 200, "amount": 99}`     | `{"amount": 99}` | `null`                     | `200`                            | `null`                    | `null`              |
+| Variant                                                 | `value`                        | `typed_value`<br/>`.userId`<br/>`.value` | `typed_value`<br/>`.userId`<br/>`.typed_value` | `typed_value`<br/>`.eType`<br/>`.value` | `typed_value`<br/>`.eType`<br/>`.typed_value` |
+|---------------------------------------------------------|--------------------------------|------------------------------------------|------------------------------------------------|-----------------------------------------|-----------------------------------------------|
+| `{`<br/>`"userId": 100,`<br/>`"eType": "login"`<br/>`}` | `null`                         | `null`                                   | `100`                                          | `null`                                  | `"login"`                                     |
+| `100`                                                   | `100`                          |                                          |                                                |                                         |                                               |           |
+| `{`<br/>`"userId": "Jim"`<br/>`}`                       | `null`                         | `"Jim"`                                  | `null`                                         | `null`                                  | `null`                                        |
+| `{`<br/>`"userId": 200,`<br/>`"amount": 99`<br/>`}`     | `{`<br/>`"amount": 99`<br/>`}` | `null`                                   | `200`                                          | `null`                                  | `null`                                        |
 
 ---
 
